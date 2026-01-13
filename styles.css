@@ -3,10 +3,10 @@
    =========================== */
 :root {
   /* Colors */
-  --bg-color: #ffe;
-  --text-color: #228567;
-  --name-color: #000;
-  --date-color: #808080;
+  --bg-color: #0f1a44;          /* nice deep navy blue */
+  --text-color: #ffffff;         /* pure white */
+  --name-color: #ffffff;         /* white for names too */
+  --date-color: #e0e0e0;         /* slightly softer white/grey for secondary text */
 }
 
 /* ===========================
@@ -22,6 +22,28 @@ body {
   background: var(--bg-color);
   font: 14px/1.4 sans-serif;
   overflow: hidden;
+  color: var(--text-color);      /* default text color for whole page */
+}
+
+/* Better readability on dark background - black outline/glow */
+#letter,
+#clock-text,
+#clock-text * {
+  color: var(--text-color);
+  text-shadow: 
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+/* Optional: slightly softer shadow for clock digits if it feels too heavy */
+#clock .digit {
+  text-shadow: 
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
 }
 
 /* ===========================
@@ -49,7 +71,7 @@ body {
   top: 80px;
   display: none;
   font-size: 16px;
-  color: var(--text-color);
+  /* color already set through var + text-shadow above */
 }
 
 /* ===========================
@@ -65,11 +87,11 @@ body {
 }
 
 #clock-text {
-  color: var(--date-color);
+  /* color & shadow already handled globally above */
 }
 
 #clock-text .name {
-  color: var(--name-color);
+  /* using white + black outline from global rule */
 }
 
 #clock {
@@ -78,4 +100,5 @@ body {
 
 #clock .digit {
   font-size: 64px;
+  /* stronger shadow defined above for big digits */
 }

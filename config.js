@@ -2,14 +2,14 @@
 const CONFIG = {
   // Couple information
   couple: {
-    name1: 'Ms.Wang',
-    name2: 'Mr.Qi',
-    connector: '和',
-    together: '在一起'
+    name1: 'Eneas, Nur',
+    name2: 'Beyza, erk',
+    connector: 'to',
+    together: 'love you'
   },
   
   // Memorial date
-  memorialDate: '2017-12-25T00:00:00',
+  memorialDate: '2025-06-01T12:30:00',
   
   // Love letter content
   letter: {
@@ -38,11 +38,11 @@ const CONFIG = {
   
   // Time display text
   time: {
-    prefix: '第 ',
-    day: '天',
-    hour: '小时',
-    minute: '分钟',
-    second: '秒'
+    prefix: ' ',
+    day: 'DAY',
+    hour: 'HOUR',
+    minute: 'MINUTE',
+    second: 'SECOND'
   },
   
   // Text on seed heart
